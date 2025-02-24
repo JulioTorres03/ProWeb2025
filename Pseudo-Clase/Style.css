@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1:hover{
+    font-size: 4rem;
+color: aqua;
+}
+h1:hover::first-letter{
+    color: brown;
+}
+.div_text--negrita{
+    
+}
