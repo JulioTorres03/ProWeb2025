@@ -1,0 +1,336 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.character-image {
+  max-height: 400px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.character-info {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.character-name {
+  font-size: 2.8rem;
+  color: #f7c600;
+  font-weight: bold;
+  animation: nameFadeIn 0.8s ease-in-out;
+}
+
+.dbz-card-wrapper {
+  width: 260px;
+  height: 700px;
+  margin: 1rem;
+  border-radius: 12px;
+  background-color: #1a1a1a;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+.dbz-card-wrapper:hover .dbz-character-img {
+  transform: scale(1.25); 
+}
+
+.dbz-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+.dbz-card-image {
+  background-color: #f4f4f4;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.dbz-character-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  transition: transform 0.4s ease;
+  z-index: 0;
+  position: relative;
+}
+
+.dbz-card-content {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dbz-character-img-section {
+  position: relative;
+  z-index: 0;
+  height: 320px; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;       
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dbz-character-img-section.frieza-race {
+  background-image: url('https://st2.depositphotos.com/7917704/10657/i/450/depositphotos_106576850-stock-photo-abstract-cosmic-background.jpg');
+  background-color: #663399;
+}
+
+.dbz-character-img-section.human {
+  background-image: url('https://media.istockphoto.com/id/1480323231/es/vector/acuarela-de-fondo-abstracto-amarillo.jpg?s=612x612&w=0&k=20&c=bJFxK-M036-s25At3JxjaouFIMab2xu5DC_5rUZbFXo=');
+  background-color: #8ec3d8;
+}
+
+.dbz-character-img-section.namekian {
+  background-image: url('https://previews.123rf.com/images/nataliagesto/nataliagesto1705/nataliagesto170500211/80166058-l%C3%ADneas-de-fondo-abstracto-amarillo-y-verde-brillante.jpg');
+  background-color: #3aa655;
+}
+
+.dbz-character-img-section.saiyan {
+  background-image: url('https://img.freepik.com/fotos-premium/textura-fondo-naranja-muro-hormigon_51524-7178.jpg');
+  background-color: #ff4400;
+}
+
+.dbz-character-img-section.android {
+  background-image: url('https://st.depositphotos.com/1000350/2282/i/450/depositphotos_22823894-stock-photo-dark-concrete-texture.jpg');
+  background-color: #2e2e2e;
+}
+
+.dbz-character-info-section {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dbz-label {
+  font-weight: bold;
+  color: gold;
+}
+
+.dbz-label span {
+  font-weight: normal;
+  color: white;
+}
+
+.dbz-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: white;
+}
+
+.dbz-race-gender {
+  color: gold;
+  font-weight: bold;
+}
+
+.detail-background {
+  background-image: url('https://img.freepik.com/vector-gratis/patron-nubes-orientales-dibujado-mano_23-2151172865.jpg?semt=ais_hybrid&w=740');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.detail-container {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.detail-label {
+  color: #ffc107;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.filtered-background {
+  background-image: url('https://img.freepik.com/vector-gratis/patron-nubes-orientales-dibujado-mano_23-2151172865.jpg?semt=ais_hybrid&w=740');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.home-background {
+  background-image: url('https://pbs.twimg.com/media/EHrpCtrWwAAhSru.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
+  min-height: 100vh;
+  width: 100%;
+  padding: 32px;
+}
+
+.home-inner {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Impact', sans-serif;
+}
+
+.acercade-background {
+  background-image: url('https://img.freepik.com/vector-gratis/patron-nubes-orientales-dibujado-mano_23-2151172865.jpg?semt=ais_hybrid&w=740');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.acercade-panel {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+.acercade-title {
+  color: #f7c600;
+  font-weight: bold;
+}
+
+.acercade-text {
+  color: white;
+  margin-top: 8px;
+}
+.logo-flotante {
+  position: fixed;
+  width: 60px;
+  top: 40%;
+  z-index: 999;
+  animation: flotar 2s ease-in-out infinite alternate;
+  opacity: 0.8;
+}
+
+.logo-flotante.izquierda {
+  left: 10px;
+}
+
+.logo-flotante.derecha {
+  right: 10px;
+}
+
+.dragon-ball-giro {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  animation: girar 4s linear infinite;
+  z-index: 999;
+}
+
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-15px); }
+}
+
+@keyframes pulso {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.1; }
+}
